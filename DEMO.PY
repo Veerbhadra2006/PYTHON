@@ -1,36 +1,75 @@
 class Node:
-    def __init__(self, data ):
-        self.data = data
+    def __init__(self,data):
+        self.prev = None
+        self.data = data 
         self.next = None
         
-# creatign a node
-node1 = Node(50)
-node2 = Node(40)
-node3 = Node(30)
-node4 = Node(20);
-node5 = Node(10);
 
-
-# coonecting / link list to each other to from a singly linked list
-
-node1.next = node2;
-node2.next = node3;
-node3.next = node4;
-node4.next = node5;
-
-
-# adding ne node in singly linked list ----- inserting node at the begining
-head = node1;
-new_node = Node(90)
-new_node.next = node1;
-head = new_node;
-
-
-
-# printig the nodes singly liked list 
-current = head;
-while current is not None:
-    print(current.data, end=" -> ")
-    current = current.next
+class doublylinkedlist:
+    def __init__(self):
+        self.head = None
+        
+        
+    def insert(self , data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        
+        temp = self.head
+        while
     
-print("NONE") 
+    
+    
+    
+    
+    
+    
+    
+    class Node:
+    def __init__(self, data):
+        self.prev = None
+        self.data = data
+        self.next = None
+
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    # insert at end
+    def insert(self, data):
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+            return
+
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+
+        temp.next = new_node
+        new_node.prev = temp
+
+    # forward traversal
+    def forward(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+        print("None")
+
+    # backward traversal
+    def backward(self):
+        temp = self.head
+
+        # go to last node
+        while temp.next:
+            temp = temp.next
+
+        # traverse backward
+        while temp:
+            print(temp.data, end=" -> ")
+            temp = temp.prev
+        print("None")
