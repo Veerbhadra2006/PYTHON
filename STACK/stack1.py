@@ -1,0 +1,41 @@
+class stack:
+    def __init__(self):
+        self.s = []
+
+    def length(self):
+        return len(self.s)
+
+    # insert element
+    def push(self, value):
+        self.s.insert(0, value)
+
+    def peek(self):
+        if len(self.s) == 0:
+            raise Exception("Stack is Empty")
+        return self.s[0]
+
+    def pop(self):
+        if len(self.s) == 0:
+            raise Exception("Stack is Empty")
+        return self.s.pop(0)
+
+    def stackPrint(self):
+        for x in self.s:
+            print(x, end=" - ")
+
+
+
+obj = stack()
+
+obj.push(10)
+obj.push(20)
+obj.push(30)
+obj.push(40)
+obj.push(50)
+
+obj.stackPrint()
+obj.pop()
+
+obj.stackPrint()
+
+
