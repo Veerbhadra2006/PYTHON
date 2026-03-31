@@ -1,41 +1,77 @@
-class stack:
-    def __init__(self):
-        self.s = []
-        
-    # find length
-    def length(self):
-        return len(self.s)
-    
-    # insert element
-    def push(self,value):
-        self.s.insert(0, value)
-      
-    # check length is empty  
-    def peek(self):
-        if len(self.s) == 0:
-            raise Exception("Stack is Empty")
-        return self.s[0]
-    
-    # delete the element
-    def pop(self):
-        if len(self.s) == 0:
-            raise Exception("Stack is Empty")
-        return self.s.pop(0)
-    
-    def stackPrint(self):
-        for x in self.s:
-            print(x, end=" ")
-            
+class CircularQueue:
+    def __init__(self, size):
+        self.size = size
+        self.items = [None] * size
+        self.front = -1
+        self.rear = -1
 
-obj = stack()
+    # ----------------------- check empty --------------------------------
+    def is_empty(self):
+        return self.front == -1
 
-obj.push(10)
-obj.push(20)
-obj.push(30)
-obj.push(40)
+    # ----------------------- check full --------------------------------
+    def is_full(self):
+        return (self.rear + 1) % self.size == self.front
+
+    # ----------------------- insert element --------------------------------
+    def enqueue(self, value):
+        if self.is_full():
+            return "Queue is full"
+
+        if self.is_empty():
+            self.front = self.rear = 0
+        else:
+            self.rear = (self.rear + 1) % self.size
+
+        self.items[self.rear] = value
+        return f"{value} inserted"
+
+    # ----------------------- delete element --------------------------------
+    def dequeue(self):
+        if self.is_empty():
+            return "Queue is empty"
+
+        value = self.items[self.front]
+
+        # only one element
+        if self.front == self.rear:
+            self.front = self.rear = -1
+        else:
+            self.front = (self.front + 1) % self.size
+
+        return value
+
+    # ----------------------- display queue --------------------------------
+    def display(self):
+        if self.is_empty():
+            print("Queue is empty")
+            return
+
+        i = self.front
+        while True:
+            print(self.items[i], end=" ")
+            if i == self.rear:
+                break
+            i = (i + 1) % self.size
+        print()
 
 
-obj.stackPrint()
-print("\nPOP Element is :",obj.pop())
+# ----------------------- Testing --------------------------------
 
-obj.stackPrint()
+obj = CircularQueue(5)
+
+obj.enqueue(10)
+obj.enqueue(20)
+obj.enqueue(30)
+obj.enqueue(40)
+
+obj.display()
+
+print("\nRemoved:", obj.dequeue(),"\n")
+
+obj.display()
+
+print("\n",obj.enqueue(60))
+print("\n",obj.enqueue(70))
+
+obj.display()
