@@ -1,0 +1,24 @@
+class Node:
+    def __init__(self, value):
+        self.left = None
+        self.right = None
+        self.data = value
+
+# PREORDER INSERTION - SIMPLE TREE
+def preOrder(root):
+    if (root != None):
+        print(root.data, end=" ")
+        preOrder(root.left)
+        preOrder(root.right)
+
+#  INPUT NODE VALUE
+root = Node(1)
+root.left = Node(3)
+root.right = Node(5)
+root.left.left = Node(2)
+root.left.right = Node(4)
+root.right.left = Node(9)
+root.right.right =Node(6) 
+
+#CALLING NODE PRNT
+preOrder(root)       
