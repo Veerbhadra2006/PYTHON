@@ -3,7 +3,8 @@ class Node:
         self.left = None
         self.right = None
         self.data = value
-        
+
+# inserting the element i the BST - binary search Tree
 def insert(root, value):
     if root == None:
         return Node(value)
@@ -15,25 +16,29 @@ def insert(root, value):
         root.right = insert(root.right, value)
     return root
 
-def search(root , value):
-    if root == None:
+# Searhing the  element in BINARY SEARCH TREE
+def search(root, value):
+    if root is None:
         print("\n Element was not found")
         return
+    
     if root.data == value:
         print("\n Element was found")
+        return
+    
     if value < root.data:
-        root.left = search(root.left, value)
+        search(root.left, value)
     else:
-        root.left = search(root.right , value)
-        
+        search(root.right, value)
+
+#Print function to display the node
 def inorder(root):
     if root is not None:
         inorder(root.left)
         print(root.data, end=" ")
         inorder(root.right)
 
-#input the value in node
-# ---------------- 20, 15, 30, 40, 12, 18, 25, 50  --------------------
+# input the value in node
 root = insert(None, 20)
 root = insert(root, 15)
 root = insert(root, 30)
@@ -43,6 +48,8 @@ root = insert(root, 18)
 root = insert(root, 25)
 root = insert(root, 50)
 
+# call print fucntion to display the node/ element
 inorder(root)
 
-search(root, 30)
+# searchig the 30 element in the Binary search Tree 
+search(root,100)

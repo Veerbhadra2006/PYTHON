@@ -8,7 +8,7 @@ class Node:
 def postOrder(root):
     if (root != None):
         postOrder(root.left)
-        postOrder(root.right)
+        postOrder(root.right) 
         print(root.data, end=" ")
        
 #input value in the node 
