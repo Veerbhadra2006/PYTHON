@@ -1,18 +1,48 @@
-def selection_sort(arr):
-    n = len(arr)
-
-    for i in range(n):
-        min_index = i
-
-        for j in range(i+1, n):
-            if arr[j] < arr[min_index]:
-                min_index = j
-
-        # swap
-        arr[i], arr[min_index] = arr[min_index], arr[i]
-
+def insert_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j = key
+        
     return arr
 
+arr = [5, 3, 4, 1]
+print(insert_sort(arr))
 
-arr = [9, 4, 2, 1, 5]
-print(selection_sort(arr))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        j = i
+        
+        while j > 0 and arr[j-1] > arr[j]:
+            arr[j], arr[j-1] = arr[j-1], arr[j]
+            j -= 1
+            
+    return arr
+
+arr = [5, 3, 4, 1]
+print(insertion_sort(arr))
