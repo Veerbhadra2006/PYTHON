@@ -1,0 +1,1 @@
+print("my name is veerbhadra", "My age is 23")
