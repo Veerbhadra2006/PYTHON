@@ -1,20 +1,16 @@
-# Write a program to count the even / odd numbers
+#write a program to find the second largest number in the array
 
-# even = 24, 32, 12, 98, 20, 40
+arr = [24, 45, 120, 90, 56, 40, 34, 68]
 
-# odd = 45, 33, 5, 31
-
-
-arr = [24, 45, 32, 12, 98, 33, 20, 5, 40, 31]
-
-evenCounter = 0
-oddCounter = 0
+largest = -1
+second_largest = -1
 
 for i in arr:
-    if i % 2 == 0:
-        evenCounter = evenCounter + 1
-    else:
-        oddCounter = oddCounter + 1
+    if largest < i:
+        second_largest = largest
+        largest = i
+    elif(second_largest < i and largest != i):
+        second_largest = i
         
-print("the total even number is : ", evenCounter)
-print("the total odd number is  : ", oddCounter)
+print("the largest number is : ", largest);
+print("the second largest number is ", second_largest)
