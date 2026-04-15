@@ -1,11 +1,11 @@
 # ---------------------------   write a program to reverse an array (METHOD - 1 ) ---------------------------------
 #REVERSE ARRAY WITH THE HELP OF reverse built-in method
 
-# arr = [25, 45, 32, 65, 67, 45, 20, 12, 2, 4]
+arr = [25, 45, 32, 65, 67, 45, 20, 12, 2, 4]
 
-# arr.reverse()
+arr.reverse()
 
-# print(arr)
+print(arr)
     
     
     
@@ -16,10 +16,10 @@
 # ---------------------------   write a program to reverse an array (METHOD - 1 )  ---------------------------------
 # REVERSE ARRAY WITH THE HELP OF slice method
 
-# arr = [25, 45, 32, 65, 67, 45, 20, 12, 2, 4]
+arr = [25, 45, 32, 65, 67, 45, 20, 12, 2, 4]
 
-# reversed_arr = arr[::-1]
-# print("The reversed array is : ", reversed_arr)
+reversed_arr = arr[::-1]
+print("The reversed array is : ", reversed_arr)
 
 
 
