@@ -12,8 +12,12 @@ for i in arr:
     elif second_largest < i and largest != i:
         second_largest = i;
 
+
 print("the largest number is : ", largest)
 print("the second largest number is : ", second_largest)
+
+
+
 
 
 
