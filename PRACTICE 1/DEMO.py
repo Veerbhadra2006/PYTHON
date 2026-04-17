@@ -1,16 +1,21 @@
-#write a program to find the second largest number in the array
+# write a program to remove the duplicates elements from the array
 
-arr = [24, 45, 120, 90, 56, 40, 34, 68]
+arr = [90, 80, 70, 10, 60, 50, 20, 40, 30,       10, 70, 60]
 
-largest = -1
-second_largest = -1
+unique_arr = list(set(arr));
+
+print(unique_arr);
+
+        
+    
+# ====================================================================================    
+ 
+    
+# create a using loop
+unique_arr = []
 
 for i in arr:
-    if largest < i:
-        second_largest = largest
-        largest = i
-    elif(second_largest < i and largest != i):
-        second_largest = i
-        
-print("the largest number is : ", largest);
-print("the second largest number is ", second_largest)
+    if i not in unique_arr:
+        unique_arr.append(i)
+
+print(unique_arr)
