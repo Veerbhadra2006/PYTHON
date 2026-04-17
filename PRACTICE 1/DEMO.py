@@ -1,21 +1,19 @@
-# write a program to remove the duplicates elements from the array
+# write a program  Moves zeros to end  of the array 
 
-arr = [90, 80, 70, 10, 60, 50, 20, 40, 30,       10, 70, 60]
+arr = [10, 0, 20, 30, 0, 40, 50]
 
-unique_arr = list(set(arr));
+insert_pos = 0 
 
-print(unique_arr);
+#move non zero elements to the front. (keeping) their order 
+for x in arr:
+    if x != 0:
+        arr[insert_pos] = x
+        insert_pos += 1
 
-        
+
+# Fill the remaining position with zeros
+for i in range(insert_pos, len(arr)):
+    arr[i] = 0
     
-# ====================================================================================    
- 
-    
-# create a using loop
-unique_arr = []
+print(arr)
 
-for i in arr:
-    if i not in unique_arr:
-        unique_arr.append(i)
-
-print(unique_arr)
