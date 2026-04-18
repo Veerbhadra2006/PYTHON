@@ -1,1 +1,1 @@
-print(arr)
+sum(arr)
