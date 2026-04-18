@@ -1,9 +1,9 @@
-arr1 = [10, 20, 30, 30, 40, 50, 60, 70, 80, 80, 90]
+# arr1 = [10, 20, 30, 30, 40, 50, 60, 70, 80, 80, 90]
 # duplicates = 30, 80
 
-unique_value = list(set(arr1))
+# unique_value = list(set(arr1))
 
-print(unique_value)
+# print(unique_value)
 
 
 
