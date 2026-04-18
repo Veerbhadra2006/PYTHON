@@ -1,17 +1,16 @@
-# write a program to find the duplicates from an array
+# Write a program to intersection of two  array  - means find the common elements that was present in both array
 
-arr = [10, 20, 30, 40, 50,  20, 30]
+arr =  [12, 13, 14, 15, 16, 17, 18, 19, 20]
 
-unique = set()
-duplicates = set()
+arr2 = [21, 22, 23, 15, 24, 25, 18, 25, 26 ]
 
+insc= []
 
-for num in arr:
-    if num in unique:
-        duplicates.add(num)
-        
-    else:
-        unique.add(num)
-        
-print("\n The array fill with the unique elements : ", unique)
-print("The duplicates elements in the array is : ", duplicates)
+# common elements are : - 15, 18
+
+for x in arr:
+    for y in arr2:
+        if x == y:
+            insc.append(x)
+
+print(insc)
