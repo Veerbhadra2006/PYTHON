@@ -1,17 +1,15 @@
-# write a program to find the duplicates from an array
+# write a program to find the duplicates elements from an array
 
-arr = [10, 20, 30, 40, 50 , 20, 30]
+arr = [10, 20, 30, 40, 50,  20, 10]
 
 unique = set()
-duplicates = set()
+duplicate = set()
 
 for num in arr:
     if num in unique:
-        duplicates.add(num)
-    
+        duplicate.add(num)
     else:
         unique.add(num)
         
-
-print("\n The array with the unique element : ", unique)
-print("The duplicates elements in the array is : ", duplicates)
+print("\n The array fill with the unique elements : " , unique)
+print("\n The duplicates elemens in the array is : ", duplicate)
