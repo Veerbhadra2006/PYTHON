@@ -1,10 +1,17 @@
-str1 = "silent"
-str2 = "listen"
+# write a program to check a first a First non-repeating char
 
-if sorted(str1) == sorted(str2):
-    print("This is Anagram")
+def first_non_repeating(s):
 
-else:
-    print("This is not Anagram")
-    
-    
+    for char in s:
+
+        if s.count(char) == 1:
+
+            return char
+
+    return None
+
+text = "aabbcde"
+
+result = first_non_repeating(text)
+
+print("First non-repeating character:", result)
