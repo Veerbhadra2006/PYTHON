@@ -1,13 +1,13 @@
 # write a program to check a substring or not
 
 # METHOD : 1 
-# text = input("Enter the string : ")
-# sub = input("Enter the string : ")
+text = input("Enter the string : ")
+sub = input("Enter the string : ")
 
-# if sub in text:
-#     print =("Sub string is present")
-# else:
-#     print("Substring is not present")
+if sub in text:
+    print("Sub string is present")
+else:
+    print("Substring is not present")
     
     
     
