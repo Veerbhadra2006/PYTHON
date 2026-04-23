@@ -1,7 +1,20 @@
-# write a program to replace the space
+# write a program to Reverse a word 
 
-text = input("Enter a String : ");
+# METHOD : 1
+text = input("Enter a word : ")
 
-result = text.replace(" ", "_")
+reverse = text[: : -1]
 
-print("Updating String is : ", result)
+print("The Reversed String is : ", reverse)
+
+
+
+
+# METHOD : 2
+text = input("Enter a word : ")
+reverse = ""
+
+for char in text:
+    reverse  = char + reverse
+
+print("The Reversed string is ; ", reverse)
