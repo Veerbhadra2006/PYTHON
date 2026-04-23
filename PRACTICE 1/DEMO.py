@@ -1,12 +1,29 @@
-# write a program to remove the duplicates
+# write a program to check a substring
 
-text = "hello world"
+# METHOD : 1
+text = input("Enter the main string : ")
+sub = input("Enter the sub string : ")
 
-result = ""
+if sub in text:
+    print("Sub string in present")
+else:
+    print("Substring is not present")
 
-for char in  text:
-    if char not in result:
-        result = result + char
-        
-print("string after the removing the duplicates : ", result)
-    
+
+
+#  METHOD : 2 USING LOOP 
+text = input("Enter main Strig : ")
+sub = input("Enter substrig : ")
+
+found =  False
+
+for i in range(len(text) - len(sub) +1):
+    if text[i : i+len(sub)] == sub:
+        found =  True
+        break
+
+if found:
+    print("Substring is presennt")
+else:
+    print("Substring is not present")
+
