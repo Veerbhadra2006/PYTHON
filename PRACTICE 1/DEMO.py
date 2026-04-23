@@ -1,15 +1,17 @@
-# write a program to find the longest common prefix
+# write a program to check a string 1 rotatin of string 2
 
-arr = ["flower", "flow" , "flight"]
+string1 = "abcde"
 
-if not arr:
-    print(" ")
-    raise SystemExit
+string2 = "cdeab"
 
-prefix = arr[0]
-
-for word in arr[1:]:
-    while prefix != "" and word.startswith(prefix) == False:
-        prefix = prefix[0 : len(prefix)-1]
-
-print(prefix)
+# step1 length check 
+if len(string1) != len(string2):
+    print("No, rotation nahi hai")
+else:
+    temp = string1 + string1
+    
+#step2 check substring
+if string2 in temp:
+    print("Yes, rotation hai")
+else:
+    print("No, rotation nahi hai")
