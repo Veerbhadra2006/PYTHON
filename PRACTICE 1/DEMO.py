@@ -1,20 +1,20 @@
-# write a program to Reverse a word 
+# write a program to Remove the vowels
 
-# METHOD : 1
-text = input("Enter a word : ")
+text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-reverse = text[: : -1]
+string = ""
 
-print("The Reversed String is : ", reverse)
-
-
-
-
-# METHOD : 2
-text = input("Enter a word : ")
-reverse = ""
 
 for char in text:
-    reverse  = char + reverse
+    if char not in "AEIOU":
+        string = string + char
 
-print("The Reversed string is ; ", reverse)
+print("After remove the vowels : ", string)
+ 
+ 
+ 
+ 
+ 
+        
+
+
