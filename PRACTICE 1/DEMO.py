@@ -1,20 +1,7 @@
-# write a program to Remove the vowels
+# write a program to check digit only string
 
-text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-string = ""
-
-
-for char in text:
-    if char not in "AEIOU":
-        string = string + char
-
-print("After remove the vowels : ", string)
- 
- 
- 
- 
- 
-        
-
-
+text = input("Enter a string : ")
+if text.isdigit():
+    print("String contais only digits")
+else:
+    print("String does not contains only digits")
