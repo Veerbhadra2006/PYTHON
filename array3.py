@@ -1,4 +1,4 @@
-# write a progra t find the duplicates elements form an array:
+# write a progra t0 find the duplicates elements form an array:
 
 arr = [10, 20, 30 , 40, 40 , 50, 60, 70, 80, 80]
 
